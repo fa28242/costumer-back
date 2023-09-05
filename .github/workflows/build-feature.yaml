@@ -11,7 +11,7 @@ jobs:
         steps: 
             - name: pull and checkout from git repository
               uses: actions/checkout@v3
-              run: | 
+                run: | 
                     echo "hola mundo"
 
             - name: Set up Java 17
@@ -21,6 +21,6 @@ jobs:
                 distribution: 'temurin'
                 
             - name: build with Maven
-              run: |
+                run: |
                     mvn clean install
                     echo "build with maven"
