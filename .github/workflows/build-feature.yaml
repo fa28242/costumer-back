@@ -9,18 +9,18 @@ jobs:
         runs-on: ubuntu-latest
         
         steps: 
+            - name: pull and checkout from git repository
             - uses: actions/checkout@v3
-            name: pull and checkout from git repository
-            run: | 
+              run: | 
                     echo "hola mundo"
 
+            - name: Set up Java 17
             - uses: action/setup-java@v3 
-            name: Setup Java 17
-            with:
+              with:
                 java-version: '17'
                 distribution: 'temurin'
                 
             - name: build with Maven
-            run: |
-                    mvnw clean install
+              run: |
+                    mvn clean install
                     echo "build with maven"
