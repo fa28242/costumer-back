@@ -21,5 +21,6 @@ jobs:
                 
             - name: Build with Maven
               run: |
-                    mvn -B package --file pom.xml     mvn clean install
+                    mvn clean install 
+                    
                     echo "build with maven"
